@@ -1,4 +1,4 @@
-# morphstring - example Grouper-compatible password encryption for Python apps
+# Example Grouper-compatible password encryption for Python apps
 
 A Python 3 command-line tool and library for Grouper-compatible morphString
 password encryption. Verified against Grouper 6.4.1. Runtime requires Python
@@ -6,6 +6,14 @@ password encryption. Verified against Grouper 6.4.1. Runtime requires Python
 
 The purpose of this project is to borrow the Grouper strategy for reducing the
 number of secrets to just one, the morphkey.
+
+<!-- TOC -->
+* [Example Grouper-compatible password encryption for Python apps](#example-grouper-compatible-password-encryption-for-python-apps)
+    * [Install and run](#install-and-run)
+    * [Shell wrapper](#shell-wrapper)
+    * [Decryption example](#decryption-example)
+    * [Regression tests](#regression-tests)
+<!-- TOC -->
 
 ## Install and run
 
@@ -20,27 +28,24 @@ python3 -m venv .venv
 The command prompts for the encryption key and password without echo and
 verifies the encrypted result. Use `-q` for ciphertext only. `-k KEY` and
 `-v VALUE` accept explicit inputs; otherwise the corresponding environment
-variables are `GROUPER_MORPHSTRING_ENCRYPT_KEY` and `MORPH_RAW_VALUE`.
+variable is `MORPHSTRING_ENCRYPT_KEY`, for example.
 
 You can also run `python src/morph.py` after installing
 `src/requirements-morph.txt`.
 
 ## Shell wrapper
 
-`src/morph.sh` invokes `morph.py` from the same directory. After installing
-the project, run this from the project root:
+To encrypt a password:
 
 ```shell
 ./src/morph.sh -c
 ./src/morph.sh -k je49jwna2jDNcb3 -v letmein7 -c -q
 ```
 
-The wrapper uses this project's `.venv/bin/python3` automatically, or `python3`
-from PATH. `MORPH_PYTHON` selects another interpreter. It works from any
-working directory and uses only files in this project. The `-g` image-version
-option is retired; `-k`, `-v`, `-c`, and `-q` are passed through to Python.
-
 ## Decryption example
+
+This example provides code to use in a container project that will need to
+decrypt passwords.
 
 `src/decrypt_example.py` accepts a morph key and an encrypted password. Its
 `decrypt_password(morphKey, morphValue)` function returns the decrypted
@@ -81,20 +86,3 @@ rawValue = decrypt_password(morphKey, morphValue)
 The suite preserves 32 fixed vectors produced by the actual Grouper 6.4.1 jar.
 An optional Java harness reproduces the original 63 comparison cases; see
 [algorithm details and verification instructions](src/README-morph.md).
-
-## Layout
-
-```text
-pyproject.toml                     Package metadata and morphstring command
-src/morph.py                       Encryption library and CLI
-src/morph.sh                       Shell wrapper for local morph.py
-src/decrypt_example.py             Decryption function and runnable example
-src/requirements-morph.txt         Runtime dependency for direct script use
-src/README-morph.md                Algorithm, compatibility, and examples
-src/tests/test_morph.py            Python regression suite
-src/tests/test_morph_shell.py      Shell wrapper regression tests
-src/tests/test_decrypt_example.py  Decryption example regression tests
-src/tests/morph-vectors.json       Saved Java-generated regression vectors
-src/tests/verify_grouper.py        Optional comparison against a real Grouper jar
-src/tests/MorphReference.java      Java helper for that comparison
-```
