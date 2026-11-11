@@ -1,0 +1,23 @@
+# Python and packaging
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local secrets and Java verification artifacts
+.env
+.env.*
+morphString.properties
+*.jar
+*.class
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/

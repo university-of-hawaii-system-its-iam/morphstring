@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grouper-morphstring"
+version = "0.1.0"
+description = "Grouper-compatible morphString password encryption"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["cryptography>=44"]
+
+[project.scripts]
+morphstring = "morph:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["morph"]

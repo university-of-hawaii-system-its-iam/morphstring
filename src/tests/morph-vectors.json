@@ -1,0 +1,165 @@
+{
+  "source": "Grouper grouperClient 6.4.1 Morph.encrypt(), Java UTF-8; test-only keys and values",
+  "vectors": [
+    {
+      "key": "je49jwna2jDNcb3",
+      "raw": "letmein7",
+      "encrypted": "h6KVnpDwSs9EML2hzZ9SMg=="
+    },
+    {
+      "key": "k",
+      "raw": "password",
+      "encrypted": "bNI1En1AiCY4BbvSqFmH4g=="
+    },
+    {
+      "key": "kkkkkkk",
+      "raw": "password",
+      "encrypted": "jpfrkiINWsch+qlbKprVOA=="
+    },
+    {
+      "key": "kkkkkkkk",
+      "raw": "password",
+      "encrypted": "R6IvWBhCnFrGF8WirWqkvg=="
+    },
+    {
+      "key": "kkkkkkkkkkkkkk",
+      "raw": "password",
+      "encrypted": "n3jJUCqP2qXW8/zHXkAMqA=="
+    },
+    {
+      "key": "kkkkkkkkkkkkkkk",
+      "raw": "password",
+      "encrypted": "09YIpXPNrmZJS7IjWpS/sw=="
+    },
+    {
+      "key": "kkkkkkkkkkkkkkkk",
+      "raw": "password",
+      "encrypted": "1EGYuB7qLXpqyJsB5hhSqw=="
+    },
+    {
+      "key": "kkkkkkkkkkkkkkkkk",
+      "raw": "password",
+      "encrypted": "JaT3fuqEXDcOUBZkWe+dRg=="
+    },
+    {
+      "key": "kkkkkkkkkkkkkkkkkkkkkkk",
+      "raw": "password",
+      "encrypted": "ppeF2+TfccClI7+oY12b3Q=="
+    },
+    {
+      "key": "kkkkkkkkkkkkkkkkkkkkkkkk",
+      "raw": "password",
+      "encrypted": "drFSb+OZjaS7VHs+73nfbA=="
+    },
+    {
+      "key": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+      "raw": "password",
+      "encrypted": "y712+eg19UG7PcfZ8MR1lg=="
+    },
+    {
+      "key": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+      "raw": "password",
+      "encrypted": "aggyel9S8k8c1WcAA5JDFg=="
+    },
+    {
+      "key": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+      "raw": "password",
+      "encrypted": "ZBHKE1bR/VbxaKKm7XVvew=="
+    },
+    {
+      "key": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+      "raw": "password",
+      "encrypted": "ZBHKE1bR/VbxaKKm7XVvew=="
+    },
+    {
+      "key": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+      "raw": "password",
+      "encrypted": "ZBHKE1bR/VbxaKKm7XVvew=="
+    },
+    {
+      "key": "je49jwna2jDNcb3",
+      "raw": "",
+      "encrypted": "1l4/WQGTMbVvoRNztrS8jA=="
+    },
+    {
+      "key": "je49jwna2jDNcb3",
+      "raw": "p",
+      "encrypted": "nsCHfNmdAwUkr7bkRu9h/w=="
+    },
+    {
+      "key": "je49jwna2jDNcb3",
+      "raw": "ppppppppppppppp",
+      "encrypted": "E7WleHTho9dpFwVFc9FH1g=="
+    },
+    {
+      "key": "je49jwna2jDNcb3",
+      "raw": "pppppppppppppppp",
+      "encrypted": "yN6gEFiK4L2siniPVtLLe9ZeP1kBkzG1b6ETc7a0vIw="
+    },
+    {
+      "key": "je49jwna2jDNcb3",
+      "raw": "ppppppppppppppppp",
+      "encrypted": "yN6gEFiK4L2siniPVtLLe57Ah3zZnQMFJK+25EbvYf8="
+    },
+    {
+      "key": "je49jwna2jDNcb3",
+      "raw": "ppppppppppppppppppppppppppppppp",
+      "encrypted": "yN6gEFiK4L2siniPVtLLexO1pXh04aPXaRcFRXPRR9Y="
+    },
+    {
+      "key": "je49jwna2jDNcb3",
+      "raw": "pppppppppppppppppppppppppppppppp",
+      "encrypted": "yN6gEFiK4L2siniPVtLLe8jeoBBYiuC9rIp4j1bSy3vWXj9ZAZMxtW+hE3O2tLyM"
+    },
+    {
+      "key": "je49jwna2jDNcb3",
+      "raw": "ppppppppppppppppppppppppppppppppp",
+      "encrypted": "yN6gEFiK4L2siniPVtLLe8jeoBBYiuC9rIp4j1bSy3uewId82Z0DBSSvtuRG72H/"
+    },
+    {
+      "key": "  je49jwna2jDNcb3  ",
+      "raw": "\t  password \t",
+      "encrypted": "1Wc7nEDU/gb6LQDo2fkT3w=="
+    },
+    {
+      "key": "je49jwna2jDNcb3",
+      "raw": "\u0000\u001f password \u001f\u0000",
+      "encrypted": "1Wc7nEDU/gb6LQDo2fkT3w=="
+    },
+    {
+      "key": "je49jwna2jDNcb3",
+      "raw": " password ",
+      "encrypted": "gY4H+F4oNxEkSXNDD0E09Q=="
+    },
+    {
+      "key": "je49jwna2jDNcb3",
+      "raw": "pāsswörd🔑/秘密",
+      "encrypted": "xno3uqcFfsVS69NxBSuJYJ+BzNf7pKPjj+WQiO0FEGU="
+    },
+    {
+      "key": "je49jwna2jDNcb3",
+      "raw": "  \t",
+      "encrypted": "1l4/WQGTMbVvoRNztrS8jA=="
+    },
+    {
+      "key": "éééééééé",
+      "raw": "unicode key valid 24 bytes",
+      "encrypted": "+Tmpef5pvZ9LjorcTN6aGocJAe7zKEVMrMmJklIn0qY="
+    },
+    {
+      "key": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa🔑",
+      "raw": "split surrogate at truncation",
+      "encrypted": "TrpbJNNPMibOfzXbOANFuoIKO43570Z7DOGBA5xazMk="
+    },
+    {
+      "key": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa🔑",
+      "raw": "truncated supplementary character",
+      "encrypted": "EsGYFTrVS70mdYQr+RQYJYwFhx4S7yO5jGMmwp9VH887YgMr5SvzAbQVB5S876gW"
+    },
+    {
+      "key": "80D6C1C5C390d7E208Ce60a13A2F2cBbdFFd97750bD3BCcdb",
+      "raw": " 2a1/X//🔑ab0c1Xc3 🔑c ébééZ00Y2 YYa3a/2X3X🔑/éa/0X 0a2Xéb10Zéb01éé🔑a1éb/1 cabc0 🔑1",
+      "encrypted": "ZBgTz+zNKEUzgBNgUMSw1WNQHDIrCcwcRBgQc8kk/XVcnYzAWzqNKfbS3lJm6OMUTLrMqbptDsPO0Oxwb9cBStYnrDCGqQViZ4h9OhxG1zD1gQJMSaqF79L2ssCeuTjOSXX2mEHbqHVjTGEQiRT3UQ=="
+    }
+  ]
+}
