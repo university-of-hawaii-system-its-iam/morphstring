@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Decrypt a Grouper morphString password and print the decrypted value.
+"""
+Decrypt a Grouper morphString password and print the decrypted value.
 
 Usage: python3 src/decrypt_example.py [-k MORPH_KEY] [-v ENCRYPTED_VALUE]
 
@@ -18,7 +19,8 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 
 
 def decrypt_password(morphKey: str, morphValue: str) -> str:
-    """Return the decrypted password for a literal key and Base64 morph value.
+    """
+    Return the decrypted password for a literal key and Base64 morph value.
 
     derive_key() applies Grouper's key trimming, 'w' suffix, and 'x' padding
     or truncation. The remaining steps reverse its AES/ECB encryption.

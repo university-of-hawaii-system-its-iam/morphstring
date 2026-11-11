@@ -2,3 +2,5 @@ include src/README-morph.md
 include src/requirements-morph.txt
 recursive-include src/tests *.py *.json *.java
 include src/decrypt_example.py
+include src/morph.sh
+include src/morphkey.sh

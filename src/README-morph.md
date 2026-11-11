@@ -1,16 +1,16 @@
 # Python morphString encryption
 
 `morph.py` produces Grouper-compatible encrypted values using Python 3 and
-`cryptography`. It does not need Docker, a JDK, or a Grouper jar at runtime.
-This project was extracted from the `uh-grouper` repository; its original
-`src/test/docker/morph.sh` remains there as a Java/container reference.
+`cryptography`. This project was extracted from the `uh-grouper` repository; 
+its original `src/test/docker/morph.sh` remains there as a Java/container 
+reference.
 
 From the repository root:
 
 ```sh
-python3 -m venv /tmp/grouper-morph-venv
-/tmp/grouper-morph-venv/bin/python -m pip install -r src/requirements-morph.txt
-/tmp/grouper-morph-venv/bin/python src/morph.py -c
+python3 -m venv .venv
+.venv/bin/python -m pip install -r src/requirements-morph.txt
+.venv/bin/python src/morph.py -c
 ```
 
 This prompts for the key and password without echo and asks for password
@@ -24,7 +24,7 @@ because the program does not run a Grouper image.
 Example using only the repository's public test key and a dummy password:
 
 ```sh
-/tmp/grouper-morph-venv/bin/python src/morph.py -k je49jwna2jDNcb3 -v letmein7 -c -q
+.venv/bin/python src/morph.py -k je49jwna2jDNcb3 -v letmein7 -c -q
 # h6KVnpDwSs9EML2hzZ9SMg==
 ```
 
@@ -68,14 +68,13 @@ the Grouper container; a JVM configured with another default charset may differ.
 passwords in this fixture are test-only. Cases cover key-length boundaries,
 password block boundaries, Java whitespace trimming, and Unicode inputs.
 
-```sh
-PYTHONPATH=src /tmp/grouper-morph-venv/bin/python -B -m unittest discover -s src/tests -p 'test_*.py' -v
+```shell
+PYTHONPATH=src .venv/bin/python -B -m unittest discover -s src/tests -p 'test_*.py' -v
 ```
 
-`-c` compares decrypted output with the Grouper-trimmed password. The shell
-script instead compares against the original password, so its verification
-fails if Grouper trims leading or trailing whitespace. Python preserves
-Grouper's encryption behavior and accounts for that trimming when verifying.
+`src/morph.sh` runs the adjacent `morph.py` and uses the same verification
+logic. `-c` compares decrypted output with the Grouper-trimmed password,
+accounting for whitespace removed during Grouper-compatible encryption.
 The CLI rejects empty and multiline input; the importable `encrypt()` function
 also supports the empty trimmed string, as Grouper does. `decrypt()` validates
 Base64 strictly and is intended to verify valid encrypted output.
@@ -84,8 +83,8 @@ The independent Java comparison harness is also saved in this project. With a
 JDK and a local Grouper 6.4.1 client jar, rerun all 63 cases (61 successful
 round trips and two invalid-key rejections) with:
 
-```sh
-PYTHONPATH=src /tmp/grouper-morph-venv/bin/python -B src/tests/verify_grouper.py /path/to/grouperClient-6.4.1.jar
+```shell
+PYTHONPATH=src .venv/bin/python -B src/tests/verify_grouper.py /path/to/grouperClient-6.4.1.jar
 ```
 
 The harness compiles `src/tests/MorphReference.java` in a temporary directory
