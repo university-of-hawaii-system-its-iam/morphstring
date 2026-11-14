@@ -90,3 +90,13 @@ PYTHONPATH=src .venv/bin/python -B src/tests/verify_grouper.py /path/to/grouperC
 The harness compiles `src/tests/MorphReference.java` in a temporary directory
 and compares real Grouper outputs with Python. It uses only dummy secrets and
 does not require the jar or compiled classes to be committed.
+
+## Regression tests
+
+```shell
+.venv/bin/python -B -m unittest discover -s src/tests -p 'test_*.py' -v
+```
+
+The suite preserves 32 fixed vectors produced by the actual Grouper 6.4.1 jar.
+An optional Java harness reproduces the original 63 comparison cases; see
+[algorithm details and verification instructions](src/README-morph.md).
