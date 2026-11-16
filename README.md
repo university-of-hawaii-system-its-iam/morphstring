@@ -7,19 +7,7 @@ Runtime requires Python 3.9 or newer and `cryptography`.
 
 ## Overview
 
-Without morphkey, the Unified API project has the following secrets to manage:
-```
-JWT_SECRET_KEY: ${JWT_SECRET_KEY}
-IAM_PASSWORD: ${IAM_PASSWORD}
-IWT_PASSWORD: ${IWT_PASSWORD}
-EL_SYS_TOKEN: ${EL_SYS_TOKEN}
-MP_PASSWORD: ${MP_PASSWORD}
-MP_CIPHER_PASS: ${MP_CIPHER_PASS}
-UHIMS_PASSWORD: ${UHIMS_PASSWORD}
-UHIMS_WS_PASSWORD: ${UHIMS_WS_PASSWORD}
-RMQ_PASSWORD: ${RMQ_PASSWORD}
-AUTH_PASSWORD: ${AUTH_PASSWORD}
-```
+Without morphkey, the Unified API project has nearly a dozan secrets to manage.
 After implementing the morphkey strategy, only one secret is needed:
 ```
 MORPH_KEY: ${MORPH_KEY}
