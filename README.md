@@ -15,7 +15,7 @@ MORPH_KEY: ${MORPH_KEY}
 The application will use the morphkey to decrypt the secrets (morphvalues) at 
 runtime. The encrypted values can be stored in a `.env`, for example:
 ```
-JWT_SECRET_KEY: VffnvluaRk2wql3ve74TMxpn4zOEKf905QksXv0YKmUwca5w
+JWT_SECRET_KEY_ENCRYPTED: VffnvluaRk2wql3ve74TMxpn4zOEKf905QksXv0YKmUwca5w
 ```
 Use the shell scripts to create both the morphkey and the encrypted values.
 
