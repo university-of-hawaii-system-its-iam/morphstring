@@ -24,12 +24,14 @@ Use the shell scripts to create both the morphkey and the encrypted values.
 This project provides code for a Python function to use in a container project 
 that will need to decrypt passwords.
 
-Copy from `src/decrypt_example.py` the function `decrypt_password()` into your project.
+Copy from `src/decrypt_example.py` the function `decrypt_password()` into your 
+project.
 
 ## Shell wrappers
 
 Generate a set of morphkeys, one of which can be used to encrypt passwords
-for your containerized app. Be sure to store it in BitWardin for safe keeping.
+for your containerized app. Be sure to store it in BitWardin, for example, for 
+safe keeping.
 
 ```shell
 ./src/morphkey.sh
